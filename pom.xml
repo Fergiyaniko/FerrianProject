@@ -144,6 +144,8 @@
 				<directory>src/main/resources</directory>
 				<includes>
 					<include>**/*.html</include>
+					<include>**/*.xml</include>
+					<include>**/jasperreports_extension.properties</include>
 				</includes>
 				<filtering>false</filtering>
 			</resource>

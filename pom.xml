@@ -147,6 +147,9 @@
 				</includes>
 				<filtering>false</filtering>
 			</resource>
+			<resource>
+				<directory>upload</directory>
+			</resource>
 		</resources>
 	</build>
 

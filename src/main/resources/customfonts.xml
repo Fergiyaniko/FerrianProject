@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+<fontFamilies>
+
+	<fontFamily name="FreeUniversal">
+		<normal>com/alfred/utils/report/fonts/FreeUniversal-Regular.ttf</normal>
+		<bold>com/alfred/utils/report/fonts/FreeUniversal-Bold.ttf</bold>
+		<italic>com/alfred/utils/report/fonts/FreeUniversal-Italic.ttf</italic>
+		<boldItalic>com/alfred/utils/report/fonts/FreeUniversal-BoldItalic.ttf</boldItalic>
+		<pdfEncoding>Cp1252</pdfEncoding>
+		<pdfEmbedded>true</pdfEmbedded>
+	</fontFamily>
+
+</fontFamilies>
+ -->
+
+
+
+<fontFamilies>
+    <fontFamily name="Calibri">
+        <normal>com/example/servingwebcontent/fonts/Calibri-Regular.ttf</normal>
+        <bold>com/example/servingwebcontent/fonts/Calibri-Regular.ttf</bold>
+        <italic>com/example/servingwebcontent/fonts/Calibri-Regular.ttf</italic>
+        <boldItalic>com/example/servingwebcontent/fonts/Calibri-Regular.ttf</boldItalic>
+        <pdfEncoding>Identity-H</pdfEncoding>
+        <pdfEmbedded>true</pdfEmbedded>
+    </fontFamily>
+    <fontFamily name="FreeUniversalHei">
+        <normal>com/example/servingwebcontent/fonts/msyh.ttf</normal>
+        <bold>com/example/servingwebcontent/fonts/msyhbd.ttf</bold>
+        <italic>com/example/servingwebcontent/fonts/msyh.ttf</italic>
+        <boldItalic>com/example/servingwebcontent/fonts/msyhbd.ttf</boldItalic>
+        <pdfEncoding>Identity-H</pdfEncoding>
+        <pdfEmbedded>true</pdfEmbedded>
+    </fontFamily>
+    <fontFamily name="FreeUniversalTest">
+        <normal>com/example/servingwebcontent/fonts/FreeUniversal-Regular.ttf</normal>
+        <bold>com/example/servingwebcontent/fonts/FreeUniversal-Regular.ttf</bold>
+        <italic>com/example/servingwebcontent/fonts/FreeUniversal-Regular.ttf</italic>
+        <boldItalic>com/example/servingwebcontent/fonts/FreeUniversal-Regular.ttf</boldItalic>
+        <pdfEncoding>Identity-H</pdfEncoding>
+        <pdfEmbedded>true</pdfEmbedded>
+    </fontFamily>
+</fontFamilies>

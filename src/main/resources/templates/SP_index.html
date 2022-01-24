@@ -61,7 +61,7 @@
                 </thead>
             </table>
 
-            <a class="btn btn-success" style="float:right;margin-left:24px" href="/SP/exportExcel">Export to excel</a>
+            <a id="exportButton" class="btn btn-success disabled" style="float:right;margin-left:24px" href="/SP/exportExcel">Export to excel</a>
             <button style="float:right" class="btn btn-danger">Reset</button>
         </div>
 
@@ -76,12 +76,14 @@
             url: "/SP/confirmMember",
             data: {member_id : $("#member_id").val()},
             success: function (data) {
-                if(data == null || data == ""){
+                if(data.statusCode == -1){
                     alert("Member code not found");
                 } else {
-                    $("#nama_member").html(data.nama);
-                    $("#alamat_member").html(data.alamat);
-                    $("#kode_member").html(data.kode);
+                    $("#nama_member").html(data.data.nama);
+                    $("#alamat_member").html(data.data.alamat);
+                    $("#kode_member").html(data.data.kode);
+
+                    isExportEnable(data.exportEnable);
                 }
             },
             error: function (err) {
@@ -129,12 +131,20 @@
                     $("#input_plu").val("");
                     $("#input_qty").val("");
                     $("#input_satuan").val("");
+
+                    isExportEnable(data.exportEnable);
                 }
             },
             error: function (err) {
                 console.log(err);
             }
         });
+    }
+
+    function isExportEnable(isExportEnable){
+        if(isExportEnable) $("#exportButton").removeClass("disabled")
+
+        if(!isExportEnable) $("#exportButton").addClass("disabled")
     }
 
     function loadTable(tableId, fields, data) {

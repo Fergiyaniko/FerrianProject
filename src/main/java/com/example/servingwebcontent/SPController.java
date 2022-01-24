@@ -74,16 +74,25 @@ public class SPController {
 
     @PostMapping("/confirmMember")
     @ResponseBody
-    public Member confirmMember(HttpServletRequest req) {
+    public Map<String, Object> confirmMember(HttpServletRequest req) {
+        HashMap<String, Object> result = new HashMap<>();
         String memberId = req.getParameter("member_id");
 
         Member member = getMemberById(memberId);
 
-        if(member != null) {
-            selectedMember = member;
+        if(member == null) {
+            result.put("statusCode", -1);
+            result.put("exportEnable", isExportEnable());
+            return result;
         }
 
-        return member;
+        selectedMember = member;
+
+        result.put("statusCode", 1);
+        result.put("data", member);
+        result.put("exportEnable", isExportEnable());
+
+        return result;
     }
 
     @PostMapping("/addItem")
@@ -132,6 +141,7 @@ public class SPController {
 
         result.put("statusCode", 1);
         result.put("data", selectedProducts);
+        result.put("exportEnable", isExportEnable());
 
         return result;
     }
@@ -435,6 +445,12 @@ public class SPController {
 
 
         return dataSource;
+    }
+
+    private boolean isExportEnable(){
+        if(selectedMember == null) return false;
+
+        return selectedProducts != null && selectedProducts.size() > 0;
     }
 
 }

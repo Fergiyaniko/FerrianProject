@@ -140,16 +140,13 @@
 				</includes>
 				<filtering>false</filtering>
 			</resource>
-			<resource>
-				<directory>src/main/resources</directory>
-				<includes>
-					<include>**/*.html</include>
-				</includes>
-				<filtering>false</filtering>
-			</resource>
-			<resource>
-				<directory>upload</directory>
-			</resource>
+<!--			<resource>-->
+<!--				<directory>src/main/resources</directory>-->
+<!--				<includes>-->
+<!--					<include>**/*.html</include>-->
+<!--				</includes>-->
+<!--				<filtering>false</filtering>-->
+<!--			</resource>-->
 		</resources>
 	</build>
 

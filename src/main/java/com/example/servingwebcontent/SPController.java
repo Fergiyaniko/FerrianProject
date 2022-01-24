@@ -61,7 +61,7 @@ public class SPController {
 
         File currDir = new File(".");
         String path = currDir.getAbsolutePath();
-        String fileLocation = path.substring(0, path.length() - 1) + "upload\\" + "excel.xls";
+        String fileLocation = path.substring(0, path.length() - 1) + "excel.xls";
 
         products = loadProducts(fileLocation);
         members = loadMembers(fileLocation);

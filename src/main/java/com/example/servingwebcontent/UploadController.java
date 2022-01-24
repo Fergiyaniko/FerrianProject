@@ -35,7 +35,7 @@ public class UploadController {
 		File currDir = new File(".");
 
 		String path = currDir.getAbsolutePath();
-		String fileLocation = path.substring(0, path.length() - 1) + "upload\\" + "excel.xls";
+		String fileLocation = path.substring(0, path.length() - 1) + "excel.xls";
 		FileOutputStream f = new FileOutputStream(fileLocation);
 		int ch = 0;
 		while ((ch = in.read()) != -1) {
